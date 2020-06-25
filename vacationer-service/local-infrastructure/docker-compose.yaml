@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  mongo:
+    image: com.vuba/vacationer-mongo:0.0.1
+    build:
+      context: mongo
+    environment:
+      MONGO_USERNAME: admin
+      MONGO_PASSWORD: admin
+    ports:
+      - "27017:27017"
+
+  kafka:
+    image: com.vuba/vacatione-kafka:0.0.1
+    ports:
+    - "9092:9092"
