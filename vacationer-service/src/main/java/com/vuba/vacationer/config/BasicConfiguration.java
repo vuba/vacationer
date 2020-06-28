@@ -1,4 +1,4 @@
-package com.vuba.vacationer;
+package com.vuba.vacationer.config;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
