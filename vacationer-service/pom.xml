@@ -16,6 +16,10 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<springfox-swagger.version>2.9.2</springfox-swagger.version>
+		<commons-lang3.version>3.10</commons-lang3.version>
+		<de.flapdoodle.embed.mongo.version>2.2.0</de.flapdoodle.embed.mongo.version>
+		<lombok.version>1.18.12</lombok.version>
 	</properties>
 
 	<dependencies>
@@ -35,7 +39,8 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<optional>true</optional>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -47,6 +52,28 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${springfox-swagger.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${springfox-swagger.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang3.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>de.flapdoodle.embed</groupId>
+			<artifactId>de.flapdoodle.embed.mongo</artifactId>
+			<version>${de.flapdoodle.embed.mongo.version}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
