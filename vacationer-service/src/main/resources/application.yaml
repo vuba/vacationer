@@ -1,4 +1,39 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+
+menagment:
+  endpoints:
+    web:
+      base-path: /internal
+      exposure:
+        include: health, info, prometheus, ping, beans, loggers, httptrace
+      path-mapping:
+        prometheus: metrics
+    health:
+      show-details: always
+  endpoint:
+    prometheus:
+      enabled: true
+    loggers:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
 spring:
   data:
     mongodb:
-      uri: mongodb://admin:admin@localhost:27017/vacation
+      uri: mongodb://admin:admin@localhost:27017/vacationer
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      enable-auto-commit: true
+      auto-offset-reset: earliest
+      max:
+        poll:
+          records: 1
