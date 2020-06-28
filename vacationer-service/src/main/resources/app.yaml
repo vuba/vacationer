@@ -3,7 +3,7 @@ server:
 
 logging:
   level:
-    root: INFO
+    root: debug
 
 menagment:
   endpoints:
@@ -28,7 +28,7 @@ menagment:
 spring:
   data:
     mongodb:
-      uri: mongodb://admin:admin@localhost:27017/vacationer
+      uri: mongodb://vacationer:vacationer@localhost:27017/vacationer
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
