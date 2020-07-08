@@ -30,4 +30,6 @@ public class Employee {
     private String personalPhoneNumber;
 
     private List<Address> addresses;
+
+    private List<Vacations> vacations;
 }
